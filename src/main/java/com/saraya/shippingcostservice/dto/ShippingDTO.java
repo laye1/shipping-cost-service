@@ -1,8 +1,14 @@
 package com.saraya.shippingcostservice.dto;
 
+ 
 import java.util.Date;
 
+
 public class ShippingDTO {
+	
+	/**
+	 * 
+	 */
 	
 	private Long id;
 	private String countryFrom;
@@ -82,6 +88,7 @@ public class ShippingDTO {
 				+ cityTo + ", zip=" + zip + ", serviceType=" + serviceType + ", moveSize=" + moveSize + ", moveDate="
 				+ moveDate + "]";
 	}
+	
 	
 
 }

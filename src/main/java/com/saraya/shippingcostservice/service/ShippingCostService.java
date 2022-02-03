@@ -6,7 +6,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 
-@Service
+
 public class ShippingCostService {
 	
 private int costRange = 0;
@@ -32,21 +32,25 @@ private int costService = 0;
   
   public int serviceTypeCost(String serviceType,int moveSize) {
 	  
-    List<String> serviceList = List.of("full packing and loading","partial packing and loading","loading");
-    
+	String serviceList = "full packing and loading";
+	String serviceList1 = "partial packing and loading";
+	String serviceList2 = "loading";
 	  
-	  if(serviceList.contains(serviceType) && serviceType.equalsIgnoreCase("full packing and loading")) {
+  
+	  
+	  if(serviceList.equalsIgnoreCase(serviceList)) {
 		  
 		  costService = moveSize*150;
 		  
-	  }else if(serviceList.contains(serviceType) && serviceType.equalsIgnoreCase("partial packing and loading")) {
+	  }else if(serviceList1.equalsIgnoreCase(serviceList1)) {
 		  
 		  costService = moveSize*100;
-	  }else if(serviceList.contains(serviceType) && serviceType.equalsIgnoreCase("loading")) {
+	  }else if(serviceList2.equalsIgnoreCase(serviceList2)) {
 		 
 		  costService = moveSize*65;
 		  
 	  }
+	  
 	  
 	  return costService;
 	   }
